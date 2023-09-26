@@ -31,7 +31,7 @@ function App() {
 
     return (
 
-    <div>
+    <div class="container">
         {content}
     </div>
 

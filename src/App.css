@@ -1,4 +1,4 @@
-#root {
+/* #root {
   max-width: 1280px;
   margin: 0 auto;
   padding: 2rem;
@@ -39,4 +39,136 @@
 
 .read-the-docs {
   color: #888;
+} */
+body{
+  background-color: #e2a23b;
 }
+.container{
+  margin: auto;
+}
+ul{
+  list-style-type: none;
+  border-radius: 5px;
+  background-color: #ffb94fd2;
+  width: 500px;
+  height: 400px;
+  margin: auto;
+}
+ul{overflow:hidden; overflow-y:scroll;}
+h1{
+  font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  color:#3098E6;
+  text-align: center;
+}
+button {
+  background-color: #0095ff;
+  border: 1px solid transparent;
+  border-radius: 3px;
+  box-shadow: rgba(255, 255, 255, .4) 0 1px 0 0 inset;
+  box-sizing: border-box;
+  color: #fff;
+  cursor: pointer;
+  display: inline-block;
+  font-family: -apple-system,system-ui,"Segoe UI","Liberation Sans",sans-serif;
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 1.15385;
+  margin: 0;
+  outline: none;
+  padding: 5px .8em;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  vertical-align: baseline;
+  white-space: nowrap;
+}
+
+button:hover,
+button:focus {
+  background-color: #07c;
+}
+
+button:focus {
+  box-shadow: 0 0 0 4px rgba(0, 149, 255, .15);
+}
+
+button:active {
+  background-color: #0064bd;
+  box-shadow: none;
+}
+.dog-button{
+  width: 70px;
+}
+#dogloggo{
+  width: 100px;
+  height: auto;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: -4px;
+}
+#catalogloggo{
+  width: 300px;
+  height: auto;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 10px;
+  border-color: rgb(255, 111, 0);
+  border-style:groove;
+  text-align: center;
+  margin-bottom: 20px;
+  border-color: #3098E6;
+  
+}
+#hund{
+  object-fit: cover;
+  width: 500px;
+  height: 500px;
+  padding: -20px;
+  margin-bottom: -4px;
+}
+.flex-container{
+  display: flex;
+  width: 1000px;
+  margin:auto;
+}
+.flex-child{
+  flex: 1;
+  border: 2px solid rgba(255, 221, 0, 0.743);
+  margin-left: 10px;
+}
+.flex-container-dog{
+  font-family:Verdana, Geneva, Tahoma, sans-serif;
+  font-size: small;
+  display: flex;
+  width: auto;
+  margin:auto;
+  text-align: center;
+  margin-top: 4px;
+}
+.flex-child-dog{
+  text-align: left;
+  flex: 1;
+  line-height: 28px;
+  margin-left: 30px;
+}
+.block{
+  display: block;
+}
+#welcom {
+  margin: auto;
+  color:white;
+  margin: 30px;
+  text-align: center;
+  margin-top: 180px;
+  
+}
+#buttoncatalog {
+
+  margin-top: 20px;
+}
+
