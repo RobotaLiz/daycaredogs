@@ -140,6 +140,7 @@ button:active {
   flex: 1;
   border: 2px solid rgba(255, 221, 0, 0.743);
   margin-left: 10px;
+  margin-top: 40px;
 }
 .flex-container-dog{
   font-family:Verdana, Geneva, Tahoma, sans-serif;
@@ -156,8 +157,8 @@ button:active {
   line-height: 28px;
   margin-left: 30px;
 }
-.block{
-  display: block;
+.inline{
+  display: inline;
 }
 #welcom {
   margin: auto;
@@ -170,5 +171,20 @@ button:active {
 #buttoncatalog {
 
   margin-top: 20px;
+}
+h4{
+  padding-left: 15px;
+  text-align: start;
+  margin: auto;
+  color:white;
+
+}
+h3{
+  padding-top: 80px;
+  padding-left: 15px;
+  text-align: start;
+  margin: auto;
+  color:white;
+
 }
 
