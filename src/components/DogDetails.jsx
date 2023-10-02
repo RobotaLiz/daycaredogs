@@ -1,15 +1,19 @@
+import { Link, useParams } from "react-router-dom";
 
 const DogDetails = (props) => {
+    let params = useParams();
+
+   let dog = props.getDog(params.chipnumber);
 
     function boolColor() {
-        if (props.dog.present) {
+        if (dog.present) {
             return {color: 'green'};
         }else {
             return {color: 'red'};
         }
     }
     function boolSmiley() {
-        if (props.dog.present) {
+        if (dog.present) {
             return <>&#128512;</>
         }else {
             return <>&#128542;</>;
@@ -18,26 +22,29 @@ const DogDetails = (props) => {
    
     return (
         <div>
-            <button onClick={props.getBack}>Back</button>
-            <div class="flex-container">
-        
-        <div class="flex-child">
-            <img id="hund" src={props.dog.img} alt="dog" />
-        </div>
-        <div class="flex-child">
+            <Link to='/catalog'>
+                <button>Tillbaka</button>
+            </Link>
             
-            <h1>{props.dog.name}</h1>
-            <h4>· Age : {props.dog.age}</h4><br />
-            <h4>· Gender : {props.dog.sex}</h4><br />
-            <h4>· ID : {props.dog.chipNumber}</h4><br />
-            <h4>· Breed : {props.dog.breed}</h4><br />
+            <div className="flex-container">
+        
+        <div className="flex-child">
+            <img id="hund" src={dog.img} alt="dog" />
+        </div>
+        <div className="flex-child">
+            
+            <h1>{dog.name}</h1>
+            <h4>· Ålder : {dog.age}</h4><br />
+            <h4>· Kön : {dog.sex}</h4><br />
+            <h4>· ID : {dog.chipNumber}</h4><br />
+            <h4>· Hundras : {dog.breed}</h4><br />
             <div>
-                <h4 class="inline">· Present:</h4>
-                <h4 class="inline" style={boolColor()}>{props.dog.present.toString()}</h4>
-                <h4 class="inline"> {boolSmiley()}</h4>
+                <h4 className="inline">· Närvarande: </h4>
+                <h4 className="inline" style={boolColor()}>{dog.present.toString()}</h4>
+                <h4 className="inline"> {boolSmiley()}</h4>
             </div><br/>
-            <h3>· Owner : {props.dog.owner.name} {props.dog.owner.lastName}</h3><br/>
-            <h4>· Phone : {props.dog.owner.phoneNumber}</h4>
+            <h3>· Ägare : {dog.owner.name} {dog.owner.lastName}</h3><br/>
+            <h4>· Tele : {dog.owner.phoneNumber}</h4>
         </div>
        </div>
         </div>

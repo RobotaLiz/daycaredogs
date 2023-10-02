@@ -1,24 +1,22 @@
-import Catalog from "./Catalog";
 import hund from "./../assets/hund.jpeg"
+import { Link } from "react-router-dom";
 
 const Welcome = (props) => {
 
     return (
-        <div class="flex-container">
-            <div class="flex-child">
+        <div className="flex-container">
+            <div className="flex-child">
                 <img id="hund" src={hund} alt="" />
             </div>
-            <div class="flex-child">
+            <div className="flex-child">
                 <h2 id="welcom">Hej och Välkommen till Dagis För hundar, tryck på katalog för att 
                     se våra registrerade hundar. 
-                    <br /><button id="buttoncatalog" onClick={props.toCatalog}>Katalog</button>
-                </h2>
-                
-                
+                    <br />
+                    <Link to='/catalog'>
+                        <button id="buttoncatalog" onClick={props.toCatalog}>Katalog</button>
+                    </Link>
+                </h2> 
             </div>
-            
-           
-            
         </div>
     )
 

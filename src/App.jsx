@@ -1,38 +1,42 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
+import { useState, useEffect } from 'react'
 import './App.css'
 import Welcome from './components/Welcome'
 import Catalog from './components/Catalog'
 import DogDetails from './components/DogDetails'
+import { Routes, Route } from 'react-router-dom'
 
 
 
 function App() {
 
-    const WELCOME = 'welcome', CATALOG = 'catalog';
-    const [currentScreen, setCurrentScreen] = useState(WELCOME);
+    const [AllDogs, setDogs] = useState([]);
+    const Api = "https://api.jsonbin.io/v3/b/650a7ebece39bb6dce7f5683";
     
-    const [OneDog,setDogs] = useState(null);
+   
+    async function grabJson() {
 
-    let content = null;
+        let grabApi = await fetch(Api);
+        let json = await grabApi.json()
+        setDogs(json.record);
 
-    if(OneDog != null){
-        
-        content = <DogDetails dog={OneDog} getBack={()=> setDogs(null)}/>
-    }
-    else if (currentScreen === WELCOME) {
-        content = <Welcome toCatalog={()=>setCurrentScreen(CATALOG)}/>; 
-         
-    }else{
-        content = <Catalog choosenDog={(dog) => setDogs(dog)} toWelcome={()=>setCurrentScreen(WELCOME)}/>;
-       
     } 
+     useEffect(()=>{
+        grabJson();
+
+    },[]);
+
+    function getDog(chipNumber){
+        return AllDogs.find(dog => dog.chipNumber == chipNumber);
+    }
 
     return (
 
-    <div class="container">
-        {content}
+    <div className="container">
+        <Routes>
+            <Route path='/' element={<Welcome/>}/>
+            <Route path='/catalog' element={<Catalog alldogs={AllDogs}/>}/>
+            <Route path='/dogdetails/:chipnumber' element={<DogDetails getDog={getDog}/>}/>
+        </Routes>
     </div>
 
 
