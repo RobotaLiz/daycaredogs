@@ -1,3 +1,4 @@
+import leia from './../assets/leia.jpeg'
 import { Link, useParams } from "react-router-dom";
 
 const DogDetails = (props) => {
@@ -29,7 +30,7 @@ const DogDetails = (props) => {
             <div className="flex-container">
         
         <div className="flex-child">
-            <img id="hund" src={dog.img} alt="dog" />
+            <img id="hund" src={dog.img} alt= "not found" onError={({currentTarget})=> currentTarget.src = leia} />
         </div>
         <div className="flex-child">
             
