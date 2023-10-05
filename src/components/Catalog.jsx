@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom'
 import dogloggo from './../assets/dog.png'
-import greenmark from './../assets/greenmark.png'
-import redmark from './../assets/redmmark.png'
+import greenmark from './../assets/greendot.png'
+import redmark from './../assets/reddot.png'
 
 const Catalog = (props) => {
 
@@ -18,7 +18,7 @@ const Catalog = (props) => {
     return (
         <div className="container">
             <Link to='/'>
-                <button onClick={props.toWelcome}>Tillbaka</button>
+                <button className='back' onClick={props.toWelcome}>Tillbaka</button>
             </Link>
             
             <h1 id='catalogloggo'>HundKatalog</h1>

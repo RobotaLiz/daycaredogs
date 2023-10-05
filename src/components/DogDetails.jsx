@@ -24,7 +24,7 @@ const DogDetails = (props) => {
     return (
         <div>
             <Link to='/catalog'>
-                <button>Tillbaka</button>
+                <button className='back'>Tillbaka</button>
             </Link>
             
             <div className="flex-container">
