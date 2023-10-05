@@ -1,8 +1,19 @@
 import { Link } from 'react-router-dom'
 import dogloggo from './../assets/dog.png'
-
+import greenmark from './../assets/greenmark.png'
+import redmark from './../assets/redmmark.png'
 
 const Catalog = (props) => {
+
+    function redOrGreen(dog) {
+        if (dog.present){
+            return greenmark
+        }else{
+            return redmark;
+        }
+        
+    
+    }
     
     return (
         <div className="container">
@@ -15,6 +26,7 @@ const Catalog = (props) => {
             <ul>
                 {props.alldogs.map((dog) => (
                     <li className="flex-container-dog" key={dog.chipNumber}>
+                        <img className='checkboxdog' src={redOrGreen(dog)} alt="checkbox" />
                         <Link to={"/dogdetails/"+dog.chipNumber}>
                             <button className="dog-button" >{dog.name}</button>
                         </Link>

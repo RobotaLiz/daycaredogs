@@ -32,7 +32,7 @@ const DogDetails = (props) => {
         <div className="flex-child">
             <img id="hund" src={dog.img} alt= "not found" onError={({currentTarget})=> currentTarget.src = leia} />
         </div>
-        <div className="flex-child">
+        <div id="dogsquare" className="flex-child">
             
             <h1>{dog.name}</h1>
             <h4>· Ålder : {dog.age}</h4><br />
