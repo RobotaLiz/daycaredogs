@@ -18,7 +18,7 @@ const Catalog = (props) => {
     return (
         <div className="container">
             <Link to='/'>
-                <button className='back' onClick={props.toWelcome}>Tillbaka</button>
+                <button className='back'>Tillbaka</button>
             </Link>
             
             <h1 id='catalogloggo'>HundKatalog</h1>

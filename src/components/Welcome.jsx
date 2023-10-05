@@ -13,7 +13,7 @@ const Welcome = (props) => {
                     se våra registrerade hundar. 
                     <br />
                     <Link to='/catalog'>
-                        <button id="buttoncatalog" onClick={props.toCatalog}>Katalog</button>
+                        <button id="buttoncatalog">Katalog</button>
                     </Link>
                 </h2> 
             </div>
